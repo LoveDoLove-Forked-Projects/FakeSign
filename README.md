@@ -12,7 +12,6 @@
 
 - http://timers.dns.navy/
 - http://timers.524228.xyz/
-- [http://a.timers.524228.xyz/](http://a.timers.524228.xyz/)
 
 ## 项目介绍 / Introduction
 
