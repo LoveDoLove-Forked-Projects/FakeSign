@@ -8,10 +8,8 @@
 
 - http://timers.dns.navy/
 - http://timers.524228.xyz/
-<<<<<<< HEAD
 - http://timers.us.kg/
-=======
->>>>>>> 3856cdd236c63a9b018e84ec00b65154725ee43a
+
 
 ## 项目介绍 / Introduction
 
