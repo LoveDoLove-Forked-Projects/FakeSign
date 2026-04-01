@@ -109,7 +109,7 @@ Purchasing a code signing certificate is very expensive, and on the Windows plat
       2. X86和X64完整签名命令(X86 and X64 fully signning commands)：
 
          ```cmd
-         inf2cat /v /os:ista_X86,Vista_X64,7_X86,7_X64,8_X86,8_X64,6_3_X86,6_3_X64,10_X86,10_X64,10_AU_X86,10_AU_X64,10_RS2_X86,10_RS2_X64,10_RS3_X86,10_RS3_X64,10_RS4_X86,10_RS4_X64,10_RS5_X86,10_RS5_X64,10_19H1_X86,10_19H1_X64,10_VB_X86,10_VB_X64,10_CO_X64,10_NI_X64,Server10_X64,SERVER2016_X64,ServerRS5_X64 /driver:.
+         inf2cat /v /os:Vista_X86,Vista_X64,7_X86,7_X64,8_X86,8_X64,6_3_X86,6_3_X64,10_X86,10_X64,10_AU_X86,10_AU_X64,10_RS2_X86,10_RS2_X64,10_RS3_X86,10_RS3_X64,10_RS4_X86,10_RS4_X64,10_RS5_X86,10_RS5_X64,10_19H1_X86,10_19H1_X64,10_VB_X86,10_VB_X64,10_CO_X64,10_NI_X64,Server10_X64,SERVER2016_X64,ServerRS5_X64 /driver:.
          ```
          
       3. A64和I64驱动签名命令(ARM and A64 driver signning commands)：
