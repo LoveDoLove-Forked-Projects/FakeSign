@@ -602,9 +602,9 @@ export const indexHTML = `<!DOCTYPE html>
         </div>
         <code>
 <span class="comment" data-i18n="code_comment1"># Sign with real timestamp</span><br>
-<span class="cmd">signtool</span> sign <span class="arg">/tr</span> <span class="url">http://your-domain/</span> <span class="arg">/td</span> SHA256 <span class="arg">/fd</span> SHA256 <span class="arg">/f</span> cert.pfx file.exe<br><br>
+<span class="cmd">signtool</span> sign <span class="arg">/tr</span> <span class="url domain-url">http://your-domain/</span> <span class="arg">/td</span> SHA256 <span class="arg">/fd</span> SHA256 <span class="arg">/f</span> cert.pfx file.exe<br><br>
 <span class="comment" data-i18n="code_comment2"># Sign with custom timestamp (fake time)</span><br>
-<span class="cmd">signtool</span> sign <span class="arg">/tr</span> <span class="url">http://your-domain/2020-01-01T00:00:00</span> <span class="arg">/td</span> SHA256 <span class="arg">/fd</span> SHA256 <span class="arg">/f</span> cert.pfx file.exe
+<span class="cmd">signtool</span> sign <span class="arg">/tr</span> <span class="url domain-url-fake">http://your-domain/2020-01-01T00:00:00</span> <span class="arg">/td</span> SHA256 <span class="arg">/fd</span> SHA256 <span class="arg">/f</span> cert.pfx file.exe
         </code>
       </div>
 
@@ -615,9 +615,9 @@ export const indexHTML = `<!DOCTYPE html>
         </div>
         <code>
 <span class="comment" data-i18n="code_comment3"># Legacy Authenticode timestamp (SHA-1)</span><br>
-<span class="cmd">signtool</span> sign <span class="arg">/t</span> <span class="url">http://your-domain/</span> <span class="arg">/f</span> cert.pfx file.exe<br><br>
+<span class="cmd">signtool</span> sign <span class="arg">/t</span> <span class="url domain-url">http://your-domain/</span> <span class="arg">/f</span> cert.pfx file.exe<br><br>
 <span class="comment" data-i18n="code_comment4"># Authenticode with custom time</span><br>
-<span class="cmd">signtool</span> sign <span class="arg">/t</span> <span class="url">http://your-domain/2020-06-15T12:00:00</span> <span class="arg">/f</span> cert.pfx file.exe
+<span class="cmd">signtool</span> sign <span class="arg">/t</span> <span class="url domain-url-fake">http://your-domain/2020-06-15T12:00:00</span> <span class="arg">/f</span> cert.pfx file.exe
         </code>
       </div>
 
@@ -629,7 +629,7 @@ export const indexHTML = `<!DOCTYPE html>
         <code>
 <span class="comment" data-i18n="code_comment5"># RFC 3161 request</span><br>
 <span class="cmd">curl</span> <span class="arg">-X POST</span> <span class="arg">-H</span> "Content-Type: application/timestamp-query" \\<br>
-&nbsp;&nbsp;&nbsp;&nbsp; <span class="arg">--data-binary</span> @request.tsq <span class="url">http://your-domain/</span> \\<br>
+&nbsp;&nbsp;&nbsp;&nbsp; <span class="arg">--data-binary</span> @request.tsq <span class="url domain-url">http://your-domain/</span> \\<br>
 &nbsp;&nbsp;&nbsp;&nbsp; <span class="arg">-o</span> response.tsr
         </code>
       </div>
@@ -820,6 +820,16 @@ export const indexHTML = `<!DOCTYPE html>
       // Language: saved > browser detect
       const savedLang = localStorage.getItem('tsa-lang') || detectLang();
       applyLang(savedLang);
+
+      // Replace domain placeholders with actual origin
+      const origin = window.location.origin;
+      document.querySelectorAll('.domain-url').forEach(el => {
+        el.textContent = origin + '/';
+      });
+      document.querySelectorAll('.domain-url-fake').forEach(el => {
+        const text = el.textContent || '';
+        el.textContent = text.replace(/http:\\/\\/your-domain/, origin);
+      });
     })();
   </script>
 </body>
