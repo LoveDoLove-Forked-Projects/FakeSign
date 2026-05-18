@@ -5,3 +5,7 @@ TSServer/LibTimeStamp/obj/
 SignTool/bin/
 SignTool/obj/
 SignTool/Release/
+TSWorker/node_modules
+TSWorker/wrangler.test.toml
+docs/node_modules
+*.tsr

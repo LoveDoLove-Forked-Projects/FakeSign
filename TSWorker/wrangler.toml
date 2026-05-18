@@ -1,0 +1,11 @@
+name = "timestamp-worker"
+main = "src/index.ts"
+compatibility_date = "2024-05-01"
+
+[vars]
+# TSA_TYPE: Key algorithm type, options: RSA, EC-P256, EC-P384, EC-P521, SM2
+# Default is "RSA" if not set. Only needed when using non-RSA keys.
+TSA_TYPE = "RSA"
+TSA_FAKE = "true"
+TSA_CERT = ""
+TSA_KEYS = ""
