@@ -11,3 +11,4 @@ docs/node_modules
 *.tsr
 .idea/
 .idea
+TSWorker/.wrangler

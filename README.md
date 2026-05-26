@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://fakesign.pages.dev">📖 文档站</a> ·
-  <a href="https://test.certs.us.kg/">🔑 申请证书</a> ·
+  <a href="https://testca.524228.xyz/">🔑 申请证书</a> ·
   <a href="Argument/DISCLAIMER.md">⚠️ 免责声明</a>
 </p>
 
@@ -128,7 +128,7 @@ Windows 驱动签名验证时会检查时间戳，只要时间戳表明签名在
 > - 设置 CRL 地址（推荐 Nginx，把 CRL 文件放入对应地址），或者设置 OCSP 服务器（OpenSSL OCSP）
 > - 搭建并启动时间戳响应服务器（RFC 3161 以及 Authenticode 格式，需要同时支持 SHA1+SHA256）
 
-您可以直接前往 [皮卡丘公共服务测试根证书](https://test.certs.us.kg/) 一键申请时间戳证书，无需自建。
+您可以直接前往 [皮卡丘公共服务测试根证书](https://testca.524228.xyz/) 一键申请时间戳证书，无需自建。
 
 ### 禁用内核驱动强制签名方法
 
@@ -147,7 +147,7 @@ bcdedit /bootdebug ON
 
 ## 自建时间服务 | Deploy TSA Server
 
-> 一般情况无需自建 TSA 服务，直接使用公共时间戳服务即可。如有需要，前往 [皮卡丘测试证书在线服务](https://test.certs.us.kg/) 申请证书。
+> 一般情况无需自建 TSA 服务，直接使用公共时间戳服务即可。如有需要，前往 [皮卡丘测试证书在线服务](https://testca.524228.xyz/) 申请证书。
 
 ### 方式一：Cloudflare Workers（推荐）
 
