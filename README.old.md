@@ -144,13 +144,13 @@ Purchasing a code signing certificate is very expensive, and on the Windows plat
 
 4. 备注信息 / Notice：
 
-  1. 上述教程无需自建TSA服务，如有需要自己搭建的，可以直接前往[皮卡丘公共服务测试根证书](https://test.certs.us.kg/)申请您的时间戳证书
+  1. 上述教程无需自建TSA服务，如有需要自己搭建的，可以直接前往[皮卡丘公共服务测试根证书](https://testca.524228.xyz/)申请您的时间戳证书
 
   2. 签名时间顺序：驱动版本时间<=sys/dll签名时间<=CAT创建时间<=CAT签名时间
 
   3. The above tutorial does not require building your own TSA service.
 
-     If you need to build it yourself, go to [Pikachu Public Test CA](https://test.certs.us.kg/) Apply for your timestamp certificate
+     If you need to build it yourself, go to [Pikachu Public Test CA](https://testca.524228.xyz/) Apply for your timestamp certificate
 
   4. Signing time sequence: Driver version time<=sys/dll Signature time<=CAT creation time<=CAT signature time
 
@@ -305,7 +305,7 @@ signtool.exe sign /f Cert.pfx /p password /fd sha256 /tr "http://test.timer.us.k
 
   - #### 自建伪造时间戳服务器
 
-    **您可以直接前往[皮卡丘公共服务测试根证书](https://test.certs.us.kg/)一键申请您自己的时间戳证书，无需再自建，自建教程：**
+    **您可以直接前往[皮卡丘公共服务测试根证书](https://testca.524228.xyz/)一键申请您自己的时间戳证书，无需再自建，自建教程：**
 
     > - 自建CA证书（CA=TRUE，密钥用法=Certificate Signing, Off-line CRL Signing, CRL Signing，增强型密钥用法=2.5.29.32.0）
     >
@@ -321,11 +321,11 @@ signtool.exe sign /f Cert.pfx /p password /fd sha256 /tr "http://test.timer.us.k
 
 ## 自建时间服务 / TSA Server
 
-上述教程无需自建TSA服务，如有需要自己搭建的，可以直接前往[皮卡丘公共服务测试根证书](https://test.certs.us.kg/)申请您的时间戳证书
+上述教程无需自建TSA服务，如有需要自己搭建的，可以直接前往[皮卡丘公共服务测试根证书](https://testca.524228.xyz/)申请您的时间戳证书
 
 The above tutorial does not require building your own TSA service.
 
-If you need to build it yourself, go to [Pikachu Public Test CA](https://test.certs.us.kg/) Apply for your timestamp certificate
+If you need to build it yourself, go to [Pikachu Public Test CA](https://testca.524228.xyz/) Apply for your timestamp certificate
 
 ### 直接修改配置文件（推荐）
 
@@ -345,7 +345,7 @@ If you need to build it yourself, go to [Pikachu Public Test CA](https://test.ce
     "signers_url": "",
     "githubs_url": "https://github.com/PIKACHUIM/FakeSign",
     "article_url": "https://code.52pika.cn/index.php/archives/277/",
-    "service_url": "https://test.certs.us.kg/"
+    "service_url": "https://testca.524228.xyz/"
   }
   ```
 
