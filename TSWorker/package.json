@@ -10,7 +10,7 @@
     "build": "wrangler deploy --dry-run"
   },
   "dependencies": {
-    "hono": "^4.4.0",
+    "hono": "^4.12.25",
     "@peculiar/asn1-schema": "^2.3.8",
     "@peculiar/asn1-cms": "^2.3.8",
     "@peculiar/asn1-x509": "^2.3.8",
@@ -22,6 +22,6 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240512.0",
     "typescript": "^5.4.5",
-    "wrangler": "^3.57.0"
+    "wrangler": "^4.112.0"
   }
 }
